@@ -1,0 +1,54 @@
+<html>
+	<head>
+        <meta charset="utf-8" />
+        <title>RadialSlider</title>
+        <link type="text/css" rel= stylesheet href="main.css">
+		<script type = "text/javascript" src= "draggable.js"></script>
+		<style>
+			body {
+				padding:0;
+				margin:0;
+			}
+			#slider {
+				margin:0;
+				padding:0;
+				width: 100%;
+				height: 100%;
+			}
+			#background {
+				position:absolute;
+				right:50vw;
+				top: 50vh;
+				transform: translate(50%, -50%);
+			}
+			#fill {
+				position:absolute;
+				width:210px;
+				height:210px;
+				right:50vw;
+				top:50vh;
+				transform: translate(50%, -50%);
+			}
+			#node {
+				position:absolute;
+				right:50vw;
+				top: 50vh;
+				transform: translate(50%, -50%);
+			}
+		</style>
+    </head>
+    <body>
+		<div id="slider">
+			<div id="background">
+				<img src="data/radialBG.png">
+			</div>
+			<canvas id= "fill">
+				<img id="fillImg" src="data/radialFill.png">
+			</canvas>
+			<div id= "node">
+				<img src="data/radialNode.png">
+			</div>
+		</div>
+		<script type = "text/javascript" src= "main.js"></script>
+	</body>
+</html>
