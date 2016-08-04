@@ -3,51 +3,46 @@
         <meta charset="utf-8" />
         <title>RadialSlider</title>
         <link type="text/css" rel= stylesheet href="main.css">
-		<script type = "text/javascript" src= "draggable.js"></script>
 		<style>
-			body {
-				padding:0;
-				margin:0;
+			#radialSliderContainer {
+				position: relative;
+				width:320px;
+				height:320px;
+				border-radius: 160px;
+				margin: 50px auto;
+				cursor: default;
+				background-image:url(data/radialBG.png);
+			}
+			#radialSliderFill {
+				position:absolute;
+				right:50%;
+				top:50%;
+				transform: translate(50%, -50%);
+			}
+			#fillImg {
+				width:100%;
+				height:100%;
+				-webkit-transition: 0.15s linear 0s;
+				-o-transition: 0.15s linear 0s;
+    			transition: 0.15s linear 0s;
 			}
 			#slider {
-				margin:0;
-				padding:0;
-				width: 100%;
-				height: 100%;
-			}
-			#background {
-				position:absolute;
-				right:50vw;
-				top: 50vh;
-				transform: translate(50%, -50%);
-			}
-			#fill {
-				position:absolute;
-				width:210px;
-				height:210px;
-				right:50vw;
-				top:50vh;
-				transform: translate(50%, -50%);
-			}
-			#node {
-				position:absolute;
-				right:50vw;
-				top: 50vh;
-				transform: translate(50%, -50%);
+				position: absolute;
+				height: 15px;
+				width: 15px;
+				background-image: url(data/radialNode.png);
+				border-radius: 7.5px;
+				cursor: pointer;
+				z-index: 3;
 			}
 		</style>
     </head>
     <body>
-		<div id="slider">
-			<div id="background">
-				<img src="data/radialBG.png">
-			</div>
-			<canvas id= "fill">
-				<img id="fillImg" src="data/radialFill.png">
+		<div id="radialSliderContainer">
+			<canvas id= "radialSliderFill" width="210px" height="210px">
+				<img id="fillImg">
 			</canvas>
-			<div id= "node">
-				<img src="data/radialNode.png">
-			</div>
+			<div id= "slider"></div>
 		</div>
 		<script type = "text/javascript" src= "main.js"></script>
 	</body>
